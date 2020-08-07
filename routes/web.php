@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index');
+
+Route::get('/home', 'PagesController@dashboard')->name('home');
+Route::get('/profile', 'PagesController@profile')->name('profile');
+Route::get('/calendar', 'PagesController@calendar')->name('calendar');
